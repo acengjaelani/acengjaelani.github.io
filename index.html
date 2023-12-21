@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <img class="wave" src="img/wave.png">
+    <div class="container">
+        <div class="img">
+            <img src="img/bg.svg">
+        </div>
+        <div class="login-content">
+            <form onsubmit="validateLogin(); return false;">
+                <img src="img/avatar.svg">
+                <h3 class="title">Welcome To </h3>
+                <h3>Web Education SMK NEGERI 1 Garut</h3>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        <input type="text" class="input" id="username" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input" id="password" required>
+                    </div>
+                </div>
+                <a href="#">Forgot Password?</a>
+                <input type="submit" class="btn" value="Login">
+                <div id="errorMessage" style="color: red;"></div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        function validateLogin() {
+            var enteredUsername = document.getElementById("username").value;
+            var enteredPassword = document.getElementById("password").value;
+
+            // Ganti dengan kredensial yang sesuai
+            var validUsername = "smkn1garut";
+            var validPassword = "1garut";
+
+            if (enteredUsername === validUsername && enteredPassword === validPassword) {
+                // Alihkan ke halaman berikutnya atau sesuai kebutuhan Anda
+                window.location.href = "https://sites.google.com/view/smkn1garut-multimedia/beranda";
+            } else {
+                document.getElementById("errorMessage").innerHTML = "Username atau Password salah!";
+            }
+        }
+    </script>
+</body>
+
+</html>
